@@ -53,6 +53,12 @@ i.fab:hover {
   margin: 30px auto;
 }
 
+.menu-container {
+  display: inline-block;
+  text-align: center;
+  margin: 0 500px;
+}
+
 .menu-icon {
   display: block;
   cursor: pointer;

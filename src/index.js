@@ -1,1 +1,3 @@
-window.addEventListener("DOMContentLoaded", homepage);
+import { header } from "./modules/homepage";
+
+window.addEventListener("DOMContentLoaded", header);
