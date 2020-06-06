@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fantasy Restaurant</title>
+  </head>
+  <body>
+    <!-- <div id="content"></div> -->
+    <header>
+      <div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <h1 class="title">
+          Fantasy Restaurant
+        </h1>
+        <h2 class="sub-title">
+          Where taste is unreal
+        </h2>
+        
+    </header>
+    <div>
+      <div class="menu-icon">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li class="nav-open"><a href="index.html">Home</a></li>
+          <li class="nav-open"><a href="index-1.html">About</a></li>
+          <li class="nav-open"><a href="#">Menu</a></li>
+
+          <li class="nav-open"><a href="index-3.html">Blog</a></li>
+          <li class="nav-open"><a href="index-4.html">Reservation</a></li>
+          <li class="nav-open"><a href="index-5.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="pricing">
+<a href="#" class="block1">
+  <img src="../src/images/blur_img1.jpg" alt="">
+  <span class="price"><span>magna non nunc</span><span><small>$</small> 29.35</span><strong></strong></span>
+</a>
+<a href="#" class="block1">
+  <img src="../src/images/blur_img2.jpg" alt="">
+  <span class="price"><span>terto nomino</span><span><small>$</small> 35.45</span><strong></strong></span>
+</a>
+<a href="#" class="block1">
+  <img src="../src/images/blur_img3.jpg" alt="">
+  <span class="price"><span>metus feugiat</span>
+<span><small>$</small> 50.10</span><strong></strong></span>
+</a>
+
+<!-- ===== New in Menu section ====== -->
+
+<div class="container-NinM">
+    <h3 class="NinM-header">New in Menu</h3>
+  <div class="flex-container ">
+    <div class="flex-item">
+      <img src="../src/images/box_img1.jpg" alt="">
+      <div class="flex-title">Lorem Ipsum</div>
+      Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol. 
+      <br>
+      <a href="#">More Info</a>
+    </div>
+
+
+    <div class="flex-item">
+      <img src="../src/images/box_img2.jpg" alt="">
+      <div class="flex-title">Aliquamh ante</div>
+      Benteger convallis orci veli elaoreet, at ornare loremo konsequat. Phasellus era nisl auctor vel veliterut. 
+      <br>
+      <a href="#">More Info</a>
+    </div>
+
+  
+    <div class="flex-item">
+      <img src="../src/images/box_img3.jpg" alt="">
+      <div class="flex-title">Ulum volutpat</div>
+      Hrtolieger convallis omi tem aore, at ornare loren coate. Pasellus era nisl auctor vel veliterolsed pharetra. 
+      <br>
+      <a href="#">More Info</a>
+    </div>
+    <div class="flex-item">
+      <img src="../src/images/box_img4.jpg" alt="">
+      <div class="flex-title">Vestibulum volu</div>
+      Convallis orci vel mi oreet, at kotornare lorem consequat. Sellus era nisl auctor vel veliterolvenenatis nulla. 
+      <br>
+      <a href="#">More Info</a>
+    </div>
+</div>
+</div>
+
+
+<footer>  
+  <h1 class="title footer-title">
+    Fantasy Restaurant
+  </h1>
+  <h2 class="sub-title">
+    Where taste is unreal
+  </h2>
+  <hr class="footer-hline">  
+    <div class="footer-txt">
+      &copy; 2020 | <a href="#">Privacy Policy</a> <br> Website   designed by <a href="https://givemo.github.io/My_Portfolio_Website/" rel="nofollow">Givemore Chiwanza</a>
+      </div>
+  </div>
+</footer>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const navLinks = document.querySelectorAll(".nav-bar li");
+    
+      let menuOpen = false;
+      let linksOpen = false;
+  
+      menuIcon.addEventListener("click", () => {
+        openNav();
+        if (!menuOpen) {
+          menuIcon.classList.add("change");
+          menuOpen = true;
+        } else {
+          menuIcon.classList.remove("change");
+          menuOpen = false;
+        }
+      });
+
+      function openNav() {
+        if (!linksOpen) {
+          navLinks.forEach((e) => {
+            e.classList.remove("nav-open");
+          });
+          linksOpen = true;
+        } else {
+          navLinks.forEach((e) => {
+            e.classList.add("nav-open");
+          });
+          linksOpen = false;
+        }
+      }
+
+     
+    </script>
+  </body>
+</html>
