@@ -53,25 +53,20 @@ i.fab:hover {
   margin: 30px auto;
 }
 
-.menu-container {
-  display: inline-block;
-  text-align: center;
-  margin: 0 500px;
-}
-
 .menu-icon {
   display: block;
   cursor: pointer;
   align-items: center;
   margin-left: 50%;
+  margin-right: 50%;
   position: relative;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-  width: 40px;
-  height: 5px;
+  width: 60px;
+  height: 4px;
   background-color: #fff;
   margin: 4px 0;
   transition: 0.4s;
@@ -117,9 +112,14 @@ i.fab:hover {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 25px;
   color: #fff;
+  cursor: pointer;
 }
 
 .nav-bar a:hover {
+  color: #5f5e4e;
+}
+
+.nav-bar a:active {
   color: #5f5e4e;
 }
 
