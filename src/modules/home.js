@@ -1,6 +1,6 @@
-let home = function () {
+let home = (function () {
   const parentDiv = document.getElementById("content");
-  function pricing() {
+  (function pricing() {
     const div = document.createElement("div");
     div.className = "pricing";
     const imgArr = [
@@ -39,9 +39,9 @@ let home = function () {
       div.appendChild(link);
     }
     parentDiv.appendChild(div);
-  }
+  })();
 
-  function menu() {
+  (function menu() {
     const div = document.createElement("div");
     const div1 = document.createElement("div");
     const imgArr = [
@@ -50,15 +50,40 @@ let home = function () {
       "../src/images/box_img3.jpg",
       "../src/images/box_img4.jpg",
     ];
+    const titleArr = [
+      "Lorem Ipsum",
+      "Aliquamh ante",
+      "Ulum volutpat",
+      "Vestibulum volu"
+    ];
+    const contentArr = [
+      "Integer convallis orci vel mi nelaoreet, at ornare lorem consequat. Phasellus era nisl auctor vel veliterol.",
+      "Benteger convallis orci veli elaoreet, at ornare loremo konsequat. Phasellus era nisl auctor vel veliterut.",
+      "Hrtolieger convallis omi tem aore, at ornare loren coate. Pasellus era nisl auctor vel veliterolsed pharetra.",
+      "Convallis orci vel mi oreet, at kotornare lorem consequat. Sellus era nisl auctor."
+    ]
     for (let i = 0; i < 4; i++) {
       const div2 = document.createElement("div");
       div2.className = "flex-item";
+      const div3 = document.createElement("div");
+      div3.className = "flex-title";
+      const div4 = document.createElement("div");
+      div4.className = "flex-content";
       const img = document.createElement("img");
       const src = document.createAttribute("src");
+      const href = document.createAttribute("href");
+      const moreInfo = document.createElement('a')
       src.value = imgArr[i];
+      div3.innerHTML = titleArr[i]
+      div4.innerHTML = contentArr[i]
+      moreInfo.innerHTML = "More Info"
       img.setAttributeNode(src);
       div2.appendChild(img);
+      div2.appendChild(div3);
+      div2.appendChild(div4)
+      div2.appendChild(moreInfo)
       div1.appendChild(div2);
+    
     }
     div.className = "container-NinM";
     div1.className = "flex-container";
@@ -68,10 +93,7 @@ let home = function () {
     div.appendChild(title);
     div.appendChild(div1);
     parentDiv.appendChild(div);
-  }
-
-  pricing();
-  menu();
-};
+  })();
+})();
 
 export { home };
